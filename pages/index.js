@@ -1,4 +1,5 @@
-import { Button } from '@shopify/polaris';
+import { AppProvider, Button } from '@shopify/polaris';
+import '@shopify/polaris/build/esm/styles.css';
 
 export default function HomePage() {
   const adjustPrices = async () => {
@@ -7,11 +8,11 @@ export default function HomePage() {
   };
 
   return (
-    <div style={{ padding: 20 }}>
-      <h1>PricePsych</h1>
-      <Button onClick={adjustPrices} primary>
-        Juster priser nå
-      </Button>
-    </div>
+    <AppProvider i18n={{}}>
+      <div style={{ padding: 20 }}>
+        <h1>PricePsych</h1>
+        <Button primary onClick={adjustPrices}>Juster priser nå</Button>
+      </div>
+    </AppProvider>
   );
 }
