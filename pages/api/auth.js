@@ -1,6 +1,6 @@
 const CLIENT_ID = "113efe2c61cd642221343f271a72928e";
 const SCOPES = "read_products,write_products";
-const REDIRECT_URI = "https://price-psych-dz3vi1e00-arqam-hamza-ahmads-projects.vercel.app/api/auth/callback";
+const REDIRECT_URI = "https://price-psych-j7ra.vercel.app/api/auth/callback";
 
 export default async function handler(req, res) {
   const shop = req.query.shop;
